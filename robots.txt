@@ -1,0 +1,6 @@
+# Personensuchmaschinen aussperren
+User-agent: Yasni
+User-agent: Pipl
+User-agent: 123People
+User-agent: MyOnID
+Disallow: /

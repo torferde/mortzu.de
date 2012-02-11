@@ -1,0 +1,147 @@
+@font-face {
+  font-family: "SovietPunk";
+  src: url('soviet.ttf');
+}
+
+html {
+  background: #000 url(images/bg_plants.png) repeat;
+}
+
+body {
+  line-height: 1;
+  color: #2b353e;
+  font-family: Georgia, "Bitstream Charter", serif;
+  font-size: 13px;
+  margin:0;
+  padding:20px;
+  background: -moz-linear-gradient(left, rgba(0,0,0,0.6),rgba(0,0,0,0.1), rgba(0,0,0,0),rgba(0,0,0,0.4));
+  background: -webkit-gradient(linear,left top, right top, color-stop(0,  rgba(0,0,0,0.6)), color-stop(0.2,  rgba(0,0,0,0.1)), color-stop(0.5,  rgba(0,0,0,0)), color-stop(1,  rgba(0,0,0,0.4)));
+}
+
+#content #quotes tr td, #content #quotes tr th {
+  width:10px;
+  padding: 5px;
+  margin: 5px;
+}
+
+#main {
+  width: 910px;
+  margin: 0 auto;
+  background-color: #dfe2db;
+
+border: solid 9px #2d2c27;
+/*    border: solid 9px rgba(109,109,95,0.3); */
+  -webkit-border-radius: 13px;
+  -moz-border-radius: 13px;
+  border-radius: 13px;
+  box-shadow:0 1px 3px rgba(0,0,0,0.5);
+  -moz-box-shadow:0 1px 3px rgba(0,0,0,0.5);
+  -webkit-box-shadow:0 1px 3px rgba(0,0,0,0.5);
+}
+
+#content {
+  padding: 15px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  clear: both;
+  font-weight: normal;
+  font-family: "SovietPunk";
+  margin: 30px 0 5px;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+a img {
+  border: none;
+}
+
+pre {
+  font-family: "Courier 10 Pitch", Courier, monospace;
+  overflow: auto;
+}
+
+code {
+  font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+
+ul {
+  list-style: square;
+  margin: 0 0 18px 1.5em;
+}
+
+ol {
+  list-style: decimal;
+  margin: 0 0 18px 1.5em;
+}
+
+ol ol {
+  list-style: upper-alpha;
+}
+
+ol ol ol {
+  list-style: lower-roman;
+}
+
+ol ol ol ol {
+  list-style: lower-alpha;
+}
+
+strong {
+  font-weight: bold;
+}
+
+#content,
+#content input,
+#content textarea {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+#content img {
+  margin: 0;
+  height: auto;
+  max-width: 640px;
+  width: auto;
+}
+
+pre {
+  -webkit-text-size-adjust: 140%;
+}
+
+code {
+  -webkit-text-size-adjust: 160%;
+}
+
+a:link, a:visited {
+  color: #1b1c1e;
+}
+
+ul#art {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul#art li {
+  float: left;
+  display: inline;
+  height: 80px;
+  width: 80px;
+  margin: 0 10px 20px;
+  border: 5px solid #3e3e3e;
+  overflow: hidden;
+}
+
+#headertwo {
+  float: right;
+  width:243px;
+  margin: 15px 15px 0 0;
+  padding: 0 0 0 10px;
+}
+
+iframe {
+  border: none;
+}
