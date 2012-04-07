@@ -135,11 +135,19 @@ ul#art li {
   overflow: hidden;
 }
 
+#header img {
+  margin: 5px;
+}
+
 #headertwo {
   float: right;
   width:243px;
   margin: 15px 15px 0 0;
   padding: 0 0 0 10px;
+}
+
+#headertwo img {
+  margin: 0;
 }
 
 iframe {

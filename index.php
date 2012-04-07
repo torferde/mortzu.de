@@ -10,7 +10,7 @@
      preg_match("/^.*radaris\.de.*$/", $_SERVER['HTTP_REFERER']))
     header("Location: /personensuchmaschine.html");
 
-switch($_REQUEST["m"]) {
+switch($_REQUEST['m']) {
   case "all":
     $inc = "";
     break;
@@ -28,9 +28,12 @@ echo '<?xml version="1.0" encoding="utf-8"?>'; ?>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="stylesheet" href="style.css" />
 
+<?php if(!isset($_REQUEST['nojs'])) { ?>
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="galleria/galleria-1.2.6.js"></script>
     <script type="text/javascript" src="galleria/themes/classic/galleria.classic.min.js"></script>
+<?php } ?>
+
   </head>
 
   <body>
@@ -180,6 +183,7 @@ if (is_dir($dir)) {
   <li><a href="http://xhala.planetcyb.org/">xhala</a></li>
   <li><a href="http://notrademark.de/">msquare</a></li>
   <li><a href="https://blog.cvigano.de/">kritter</a></li>
+  <li><a href="https://blog.jplitza.de/">jplitza</a></li>
 </ul>
 
 <h2>Tracking</h2>
