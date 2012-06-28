@@ -52,7 +52,7 @@ echo '<?xml version="1.0" encoding="utf-8"?>'; ?>
 <ul>
   <li>seit meiner Geburt in Bremen</li>
   <li>kurze Intermezzi in Hasbergen und Delmenhorst/Heidkrug</li>
-  <li>momentan in einer Informatiker/Mathematiker-WG in der Neustadt</li>
+  <li>momentan in einer Informatiker/Soziologinnen-WG in der Neustadt</li>
   <li>zeitweise anzutreffen: MZH; Uni-Bremen</li>
 </ul>
 
@@ -90,9 +90,9 @@ echo '<?xml version="1.0" encoding="utf-8"?>'; ?>
   <li>verschiedene <a href="http://ccc.de/">CCC</a>-nahe Aktivit&auml;ten (u.A. <a href="http://dn42.net/">dn42</a>)</li>
   <li>Vereinsmitglied im <a href="http://ccc.de/">CCC</a></li>
   <li>Vereinsmitglied im FBMI (F&ouml;rderverein der Bereichsstudierendenschaften Mathematik und Informatik an der Universit&auml;t Bremen e.V.)</li>
-  <li>Betreuer diverse Archlinux-<a href="<?php echo htmlentities("http://aur.archlinux.org/packages.php?K=helios&SeB=m"); ?>">AUR-Pakete</a></li>
   <li>Webmaster vom <a href="http://hackint.eu/">hackint</a></li>
   <li>Initiator des <a href="http://jabber.uni-bremen.de/">Jabberservers</a> der Uni-Bremen</li>
+  <li>Vereinsmitglied im <a href="http://hackerspace-bremen.de/">Hackerspace Bremen</a></li>
 </ul>
 
 <h2>art</h2>
@@ -179,7 +179,7 @@ if (is_dir($dir)) {
   <li><a href="http://mieke.planetcyb.org/">mieke</a></li>
   <li><a href="http://tahlly.planetcyb.org/">tahlly</a></li>
   <li><a href="http://themesh.de/">sicarius</a></li>
-  <li><a href="http://salissa.planetcyborg.de/">salissa</a></li>
+  <li><a href="http://salissa.planetcyb.org/">salissa</a></li>
   <li><a href="http://xhala.planetcyb.org/">xhala</a></li>
   <li><a href="http://notrademark.de/">msquare</a></li>
   <li><a href="https://blog.cvigano.de/">kritter</a></li>
