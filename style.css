@@ -72,6 +72,11 @@ ul {
   margin: 0 0 18px 1.5em;
 }
 
+ul li ul {
+  margin-bottom: 0;
+  list-style-type: circle;
+}
+
 ol {
   list-style: decimal;
   margin: 0 0 18px 1.5em;
@@ -148,6 +153,10 @@ ul#art li {
 
 #headertwo img {
   margin: 0;
+}
+
+#happy-worker {
+  text-align: center;
 }
 
 iframe {

@@ -111,8 +111,7 @@ echo '<?xml version="1.0" encoding="utf-8"?>'; ?>
   <li><?php echo $alter; ?> Jahre alt</li>
   <li>Student an der <a href="http://uni-bremen.de/">Uni-Bremen</a> (<a href="http://informatik.uni-bremen.de/">Informatik</a> dipl.) im <?php echo $semester; ?>. Semester</li>
   <li>Versuch als <a href="https://de.wikipedia.org/wiki/Pescetarismus">Ovo-Lacto-Pesco-Vegetarier</a> zu leben</li>
-  <li>hochschulpolitisches Engagement an der Uni-Bremen:
-  <ul style="margin-bottom: 0">
+  <li>hochschulpolitisches Engagement an der Uni-Bremen:<ul>
     <li>Mitglied im <a href="http://inf.stugen.de/">StugA Informatik</a></li>
     <li>Stugen-Admin</li>
     <li>Gremienarbeit: IT-Lk (IT-Lenkungskreis)</li>
@@ -123,11 +122,11 @@ echo '<?xml version="1.0" encoding="utf-8"?>'; ?>
   <li><a href="http://wybt.net/">wybt</a>-Admin</li>
   <li>Vereinsmitglied im <a href="http://fbmi.de/">FBMI</a> (F&ouml;rderverein der Bereichsstudierendenschaften Mathematik und Informatik an der Universit&auml;t Bremen e.V.)</li>
   <li>Vereinsmitglied im <a href="http://ccc.de/">CCC</a></li>
-  <li>verschiedene <a href="http://ccc.de/">CCC</a>-nahe Aktivit&auml;ten<ul style="margin-bottom: 0">
+  <li>verschiedene <a href="http://ccc.de/">CCC</a>-nahe Aktivit&auml;ten<ul>
     <li><a href="http://dn42.net/">dn42</a>-Gr&uuml;nder, Eigent&uuml;mer der Domain und Administrator des tracs</li>
     <li>Developer und Admin vom <a href="https://engelsystem.de/">engelsystem</a> (source: <a href="https://planetcyborg.de/git/projects/engelsystem.git">planetcyborg.de/git/projects/engelsystem.git</a>)</li>
   </ul></li>
-  <li>Vereinsmitglied im <a href="http://hackerspace-bremen.de/">Hackerspace Bremen</a><ul style="margin-bottom: 0">
+  <li>Vereinsmitglied im <a href="http://hackerspace-bremen.de/">Hackerspace Bremen</a><ul>
     <li>Administrator des Bremer Hackerspace Servers</li>
   </ul></li>
   <li>Webmaster vom <a href="http://hackint.eu/">hackint</a></li>
@@ -142,11 +141,11 @@ echo '<?xml version="1.0" encoding="utf-8"?>'; ?>
   <li>zweimaliger Weltmeister im <a href="http://www.robocupgermanopen.de/">Robocup</a> <a href="http://junior.robocupgermanopen.de/junior/rescue">junior rescue</a> 2008/2009 
     (einmal als Teammitglied, einmal als Betreuer im Team <a href="/hoppus/">hoppuS</a>)</li>
   <li>verschiedenes politisches Engagement in Bremen (OL (Ortsleitung) der <a href="http://www.naturfreundejugend.de/">NFJ</a>-Bremen)</li>
-  <li>Sch&uuml;ler am SZ Walle Lange Reihe Sek. 2<ul style="margin-bottom: 0">
+  <li>Sch&uuml;ler am SZ Walle Lange Reihe Sek. 2<ul>
     <li>SV-Vorstand/Schulsprecher des SZ Walle Lange Reihe Sek. 2</li>
     <li>Erstellung der Schulhomepage SZ Walle Lange Reihe Sek. 2</li>
   </ul></li>
-  <li>Sch&uuml;ler des SZ Findorff<ul style="margin-bottom: 0">
+  <li>Sch&uuml;ler des SZ Findorff<ul>
     <li>Betreuung der Schulrechner des SZ Findorff</li>
     <li>Sch&uuml;lervertreter am SZ Findorff</li>
   </ul></li>
@@ -234,7 +233,7 @@ D &#8211; 28199 Bremen<br />
 Telefon: 0421 &#8211; 16 76 136<br />
 E-Mail: <a href="mailto:mr@planetcyborg.de">mr@planetcyborg.de</a></p>
 
-      <div style="text-align: center;"><img src="images/we-are-happy-workers.png" alt="" /></div>
+      <div id="happy-worker"><img src="images/we-are-happy-workers.png" alt="" /></div>
       </div>
       </div>
 
