@@ -110,27 +110,33 @@ echo '<?xml version="1.0" encoding="utf-8"?>'; ?>
 <ul>
   <li><?php echo $alter; ?> Jahre alt</li>
   <li>Student an der <a href="http://uni-bremen.de/">Uni-Bremen</a> (<a href="http://informatik.uni-bremen.de/">Informatik</a> dipl.) im <?php echo $semester; ?>. Semester</li>
-  <li>Versuch als <a href="https://de.wikipedia.org/wiki/Pescetarismus">Ovo-Lacto-Pesco-Vegetarier</a> zu leben</li>
+  <li>Versuch als <a href="https://de.wikipedia.org/wiki/Pescetarismus">Ovo-Lacto-Pesco-Vegetarier</a> zu leben<ul>
+    <li>Versuch Tiermilchprodukte durch Sojamilchprodukte zu ersetzen</li>
+  </ul></li>
   <li>hochschulpolitisches Engagement an der Uni-Bremen:<ul>
     <li>Mitglied im <a href="http://inf.stugen.de/">StugA Informatik</a></li>
-    <li>Stugen-Admin</li>
+    <li>Stugen-Administrator</li>
     <li>Gremienarbeit: IT-Lk (IT-Lenkungskreis)</li>
     <li>Gremienarbeit: Stugenkonferenz</li>
   </ul></li>
-  <li><a href="http://www.wlan.uni-bremen.de/">Campus-WLAN</a>-Betreuung als studentische Hilfskraft</li>
+  <li><a href="http://www.wlan.uni-bremen.de/">Campus-WLAN</a>-Betreuung als studentische Hilfskraft<ul>
+    <li>Betreuung der AccessPoints der Uni Bremen (Cisco 1131 und 1142 mit Cisco Controllern)</li>
+    <li>Administration von Linuxservern der WLAN-Dienste (DHCP, DNS, Webseite, <a href="https://www.icinga.org/">icinga</a>)</li>
+    <li>First level support via E-Mail, Telefon und pers&ouml;nlich</li>
+  </ul></li>
   <li>eigene Firma seit 2007 (<a href="http://planetcyborg.de/">planet cyborg</a> vormals Quasar-Net)</li>
-  <li><a href="http://wybt.net/">wybt</a>-Admin</li>
+  <li><a href="http://wybt.net/">wybt</a>-Administrator</li>
   <li>Vereinsmitglied im <a href="http://fbmi.de/">FBMI</a> (F&ouml;rderverein der Bereichsstudierendenschaften Mathematik und Informatik an der Universit&auml;t Bremen e.V.)</li>
   <li>Vereinsmitglied im <a href="http://ccc.de/">CCC</a></li>
   <li>verschiedene <a href="http://ccc.de/">CCC</a>-nahe Aktivit&auml;ten<ul>
     <li><a href="http://dn42.net/">dn42</a>-Gr&uuml;nder, Eigent&uuml;mer der Domain und Administrator des tracs</li>
-    <li>Developer und Admin vom <a href="https://engelsystem.de/">engelsystem</a> (source: <a href="https://planetcyborg.de/git/projects/engelsystem.git">planetcyborg.de/git/projects/engelsystem.git</a>)</li>
+    <li>Developer und Administrator vom <a href="https://engelsystem.de/">engelsystem</a> (source: <a href="https://planetcyborg.de/git/projects/engelsystem.git">planetcyborg.de/git/projects/engelsystem.git</a>)</li>
   </ul></li>
   <li>Vereinsmitglied im <a href="http://hackerspace-bremen.de/">Hackerspace Bremen</a><ul>
     <li>Administrator des Bremer Hackerspace Servers</li>
   </ul></li>
   <li>Webmaster vom <a href="http://hackint.eu/">hackint</a></li>
-  <li>Initiator des <a href="http://jabber.uni-bremen.de/">Jabberservers</a> der Uni-Bremen</li>
+  <li>Initiator und Administrator des <a href="http://jabber.uni-bremen.de/">Jabberservers</a> der Uni-Bremen</li>
 </ul>
 
 <h3><a name="taten_vergangen">vergangenes Leben</a></h3>
