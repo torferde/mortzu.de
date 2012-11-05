@@ -32,6 +32,11 @@
      preg_match("/^.*radaris\.de.*$/", $_SERVER['HTTP_REFERER']))
     header("Location: /personensuchmaschine.html");
 
+  if($_SERVER['HTTP_HOST'] == "helios.planetcyborg.de")
+    $mode = "helios";
+  else
+    $mode = "mr";
+
 if(isset($_REQUEST['m']) && !empty($_REQUEST['m'])) {
   switch($_REQUEST['m']) {
     case "all":
@@ -49,7 +54,19 @@ echo '<?xml version="1.0" encoding="utf-8"?>'; ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+
+<?php
+if($mode != "mr") {
+?>
     <title>wiresphere - helios, chaoticbilly, momo, moe, Moritz Rudert - names are different</title>
+<?php
+} else {
+?>
+    <title>Moritz Rudert</title>
+<?php
+}
+?>
+
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="stylesheet" href="style.css" />
 
@@ -83,10 +100,10 @@ echo '<?xml version="1.0" encoding="utf-8"?>'; ?>
 
 <h2><a name="finde_mich">Finde mich</a></h2>
 <ul>
-  <li>XMPP: <img src="https://planetcyborg.de/index.php?p=indicator&amp;jid=helios@wiresphere.de&amp;theme=0" alt="" /> <a href="xmpp:helios@wiresphere.de">helios@wiresphere.de</a></li>
+  <li>XMPP: <img src="https://planetcyborg.de/index.php?p=indicator&amp;jid=helios@planetcyborg.de&amp;theme=0" alt="" /> <a href="xmpp:helios@planetcyborg.de">helios@planetcyborg.de</a></li>
   <li>IRC: helios im <a href="http://hackint.eu/">hackint</a></li>
   <li>blog: <a href="http://mw.vc/author/helios/">milliways-blog</a></li>
-  <li>E-Mail: <a href="mailto:helios@wiresphere.de">helios@wiresphere.de</a></li>
+  <li>E-Mail: <a href="mailto:helios@planetcyborg.de">helios@planetcyborg.de</a></li>
 </ul>
 
 <h2><a name="namen">Namen sind nur Schall und Rauch</a></h2>
@@ -167,7 +184,7 @@ echo '<?xml version="1.0" encoding="utf-8"?>'; ?>
 </ul>
 
 <h2><a name="andere">andere &uuml;ber mich</a></h2>
-<small>Willst du, dass deine Aussage auch hier steht? Dann schick mir eine E-Mail an <a href="mailto:andere@wiresphere.de">andere@wiresphere.de</a>.</small><br />
+<small>Willst du, dass deine Aussage auch hier steht? Dann schick mir eine E-Mail an <a href="mailto:helios@planetcyborg.de">helios@planetcyborg.de</a>.</small><br />
 <ul>
   <li>von den Leuten, die ich bisher getroffen hab, mit die meiste Ahnung von Servern, Netzen und &Auml;hnlichem.</li>
   <li>Mit ihm arbeiten macht Spa&szlig;, ist am Anfang aber ungewohnt, denn er sagt, was er denkt; manchmal auf eine Art, an die man sich erst gew&ouml;hnen muss.</li>
@@ -183,6 +200,10 @@ echo '<?xml version="1.0" encoding="utf-8"?>'; ?>
   <li>Cooler Nerd mit lustigen Ideen und Interessen, bei dem es manchmal etwas schwierig ist, seinen Sarkasmus von Ernst zu unterscheiden.</li>
   <li>Hat mehr Dinge im Kopf, als ich K&ouml;pfe habe.</li>
 </ul>
+
+<?php
+if($mode != "mr") {
+?>
 
 <h2><a name="art">art</a></h2>
 <div id="gallery">
@@ -227,6 +248,9 @@ if (is_dir($art_folder)) {
   <li><a href="https://blog.cvigano.de/">kritter</a></li>
   <li><a href="https://blog.jplitza.de/">jplitza</a></li>
 </ul>
+<?php
+}
+?>
 
 <h2><a name="tracking">Tracking</a></h2>
 <p><iframe width="560px" height="250px" src="http://planetcyborg.de/piwik/index.php?module=CoreAdminHome&#038;action=optOut&#038;language=de" style="background: #fff;"></iframe></p>
