@@ -58,7 +58,7 @@ echo '<?xml version="1.0" encoding="utf-8"?>'; ?>
 <?php
 if($mode != "mr") {
 ?>
-    <title>wiresphere - helios, chaoticbilly, momo, moe, Moritz Rudert - names are different</title>
+    <title>helios, chaoticbilly, momo, moe, Moritz Rudert - names are different</title>
 <?php
 } else {
 ?>
