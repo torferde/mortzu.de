@@ -1,8 +1,13 @@
 <?php
+  require_once "simplepie/simplepie.inc";
+  require_once "parse_feed.php";
+
   $art_folder_rel = 'images/';
   $art_folder = $_SERVER['DOCUMENT_ROOT'] . $art_folder_rel;
   $default_inc = array();
   $excludes = array('.', '..', '.ds_store', '.svn', 'thumbs', '.not_this', '.git');
+  $config["striptags_feed"] = "<a><img><p><strong><b><i><em><br><code><ol><ul><li>";
+  $config["striptags"] = $config["striptags_feed"] . "<object><embed><param>";
 
   if(is_dir($art_folder)) {
     if($dh = opendir($art_folder)) {
@@ -72,8 +77,6 @@ if($mode != "mr") {
 
 <?php if(!isset($_REQUEST['nojs'])) { ?>
     <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="galleria/galleria-1.2.6.js"></script>
-    <script type="text/javascript" src="galleria/themes/classic/galleria.classic.min.js"></script>
 <?php } ?>
 
   </head>
@@ -205,6 +208,17 @@ if($mode != "mr") {
 if($mode != "mr") {
 ?>
 
+<h2><a name="blog">blog</a></h2>
+<?php
+$blog = parse_rss_feed("http://systemfehler.org/feed/");
+foreach($blog as $key => $post) {
+  echo "<h3><a href=\"#" . md5($key . $post['title']) . "\" name=\"" . md5($key . $post['title']) . "\">" . $post['title'] . "</a></h3>\n";
+  echo date('d.m.Y H:i', $key);
+  echo $post['description'];
+}
+
+?>
+
 <h2><a name="art">art</a></h2>
 <div id="gallery">
 <?php
@@ -279,14 +293,6 @@ piwikTracker.enableLinkTracking();
 } catch( err ) {}
 </script><noscript><p><img src="http://planetcyborg.de/piwik/piwik.php?idsite=8" style="border:0" alt="" /></p></noscript>
 <!-- End Piwik Tracking Code -->
-
-<script type="text/javascript">
-  Galleria.loadTheme('galleria/themes/classic/galleria.classic.min.js');
-  $("#gallery").galleria({
-    width: 880,
-    height: 500
-  });
-</script>
 
   </body>
 </html>

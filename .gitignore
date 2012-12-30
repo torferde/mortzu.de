@@ -1,2 +1,8 @@
 images/*
 !images/.gitignore
+cache/*
+!cache/.gitignore
+simplepie/compatibility_test/*
+markdown/License.text
+markdown/PHP Markdown Extra Readme.text
+markdown/test.php
