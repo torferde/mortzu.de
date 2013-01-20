@@ -1,15 +1,25 @@
 <?php
-  $files = array("http://status.freamware.net/irc/helios/06.png");
+  $allowed_extensions = array("jpg", "gif", "png");
 
-  if(isset($files[$_SERVER['QUERY_STRING']], $files)) {
-    $ch = curl_init();
-    curl_setopt($ch, CURLOPT_URL, $files[$_SERVER['QUERY_STRING']]);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-    $data = curl_exec($ch);
+  $tmp = pathinfo($_GET['url']);
 
-    header("Content-type: " . curl_getinfo($ch, CURLINFO_CONTENT_TYPE));
-    echo $data;
+  if(parse_url($_GET['url'], PHP_URL_HOST) == "systemfehler.org") {
+    if(in_array($tmp['extension'], $allowed_extensions)) {
+      $ch = curl_init();
+      curl_setopt($ch, CURLOPT_URL, $_GET['url']);
+      curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+      $data = curl_exec($ch);
 
-    curl_close($ch);
+      header("Content-type: " . curl_getinfo($ch, CURLINFO_CONTENT_TYPE));
+      echo $data;
+
+      curl_close($ch);
+    } else {
+      header('HTTP/1.1 403 Forbidden');
+      echo "403 Forbidden";
+    }
+  } else {
+    header('HTTP/1.1 403 Forbidden');
+    echo "403 Forbidden";
   }
 ?>

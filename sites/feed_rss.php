@@ -9,7 +9,7 @@
   echo "<rss version=\"2.0\" xmlns:atom=\"http://www.w3.org/2005/Atom\">\n";
   echo "  <channel>\n";
   echo "    <title>" . $config["maintitle"] . "</title>\n";
-  echo "    <link>http://" . $_SERVER["HTTP_HOST"] . "</link>\n";
+  echo "    <link>" . $protocol . "" . $_SERVER["HTTP_HOST"] . "</link>\n";
   echo "    <atom:link href=\"" . htmlentities($protocol . $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"]) . "\" rel=\"self\" type=\"application/rss+xml\" />\n";
   echo "    <description><![CDATA[" . $config["maintitle"] . "]]></description>\n";
   echo "    <language>de-de</language>\n";
@@ -20,7 +20,7 @@
 
     echo "<link>" . htmlentities($protocol . $_SERVER["HTTP_HOST"] . "/#" . md5($key . $post['title']), ENT_QUOTES, 'UTF-8') . "</link>\n";
     echo "<guid isPermaLink=\"true\">" . htmlentities($protocol . $_SERVER["HTTP_HOST"] . "/#" . md5($key . $post['title']), ENT_QUOTES, 'UTF-8') . "</guid>\n";
-    echo "<description><![CDATA[" . strip_tags($post["description"], $config["striptags_feed"]) . "]]></description>\n";
+    echo "<description><![CDATA[" . strip_tags(str_replace("http://systemfehler.org/files/", $protocol . $_SERVER["HTTP_HOST"] . "/secureimage.php?url=http://systemfehler.org/files/", $post['description']), $config["striptags_feed"]) . "]]></description>\n";
     echo "<pubDate>" . date("r", $key) . "</pubDate>\n";
     echo "</item>\n";
   }

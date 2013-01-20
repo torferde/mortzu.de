@@ -209,7 +209,7 @@ if($mode != "mr") {
   foreach($blog as $key => $post) {
     echo "<h3><a href=\"#" . md5($key . $post['title']) . "\" name=\"" . md5($key . $post['title']) . "\">" . $post['title'] . "</a></h3>\n";
     echo "<small>" . date('d.m.Y H:i', $key) . "</small>\n";
-    echo $post['description'];
+    echo str_replace("http://systemfehler.org/files/", "/secureimage.php?url=http://systemfehler.org/files/", $post['description']);
   }
 ?>
 
