@@ -43,6 +43,30 @@
     require_once "sites/unibremen.php";
     require_once "sites/footer.php";
     die();
+  } elseif(preg_match('/^\/gw2/', $_SERVER['REQUEST_URI'])) {
+    require_once "sites/header.php";
+    require_once "sites/gw2.php";
+    require_once "sites/footer.php";
+    die();
+  } elseif(preg_match('/^\/hsair/', $_SERVER['REQUEST_URI'])) {
+    require_once "sites/header.php";
+    require_once "sites/hsair.php";
+    require_once "sites/footer.php";
+    die();
+  } elseif(preg_match('/^\/mensa/', $_SERVER['REQUEST_URI'])) {
+    require_once "sites/header.php";
+    require_once "sites/mensa.php";
+    require_once "sites/footer.php";
+    die();
+  } elseif(preg_match('/^\/mensa_handy/', $_SERVER['REQUEST_URI'])) {
+    $mensa_cache_file = __DIR__ . "/cache/" . $mensa_cache_file;
+    require_once "../mensa/mensa_handy.php";
+    die();
+  } elseif(preg_match('/^\/hsmensa/', $_SERVER['REQUEST_URI'])) {
+    require_once "sites/header.php";
+    require_once "sites/hsmensa.php";
+    require_once "sites/footer.php";
+    die();
   } elseif(preg_match('/^\/quotes/', $_SERVER['REQUEST_URI'])) {
     require_once "sites/header.php";
     require_once "sites/quotes.php";
@@ -209,7 +233,7 @@ if($mode != "mr") {
   foreach($blog as $key => $post) {
     echo "<h3><a href=\"#" . md5($key . $post['title']) . "\" name=\"" . md5($key . $post['title']) . "\">" . $post['title'] . "</a></h3>\n";
     echo "<small>" . date('d.m.Y H:i', $key) . "</small>\n";
-    echo str_replace("http://systemfehler.org/files/", "/secureimage.php?url=http://systemfehler.org/files/", $post['description']);
+    echo str_replace("http://systemfehler.org/files/", $config['absolute_path'] . "secureimage.php?url=http://systemfehler.org/files/", $post['description']);
   }
 ?>
 
