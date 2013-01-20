@@ -25,12 +25,11 @@ body {
 }
 
 #main {
-  width: 910px;
+  width: 750px;
   margin: 0 auto;
   background-color: #dfe2db;
 
 border: solid 9px #2d2c27;
-/*    border: solid 9px rgba(109,109,95,0.3); */
   -webkit-border-radius: 13px;
   -moz-border-radius: 13px;
   border-radius: 13px;

@@ -1,5 +1,7 @@
 <?php
-function parse_rss_feed($url) {
+  if(!defined("INCLUDE")) die();
+
+  function parse_rss_feed($url) {
     global $config;
 
     $entry = array();
