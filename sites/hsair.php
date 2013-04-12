@@ -26,8 +26,8 @@
 
   $hsair = json_decode($hsairjson, true);
 
-  if(isset($_GET["when"]))
-    $when = $_GET["when"];
+  if(isset($_GET['when']))
+    $when = $_GET['when'];
 
   if(isset($when) && $when == "tomorrow")
     $weekday = date("N") + 1;
@@ -40,15 +40,15 @@
   echo "<div id=\"mensadata\">\n";
 
   if(isset($when) && $when == "week") {
-    foreach($hsair["datum"]['v'] as $key => $value) {
+    foreach($hsair['datum']['v'] as $key => $value) {
       if($key == 0) continue;
 
       echo "<h3>" . $value . "</h3>\n";
       echo "<h4>Essen 1</h4>\n";
-      echo "<p>" . $hsair["essen1"]['v'][$key] . " (" . $hsair["essen1"]['p'][$key] . ")</p>\n";
+      echo "<p>" . $hsair['essen1']['v'][$key] . " (" . $hsair['essen1']['p'][$key] . ")</p>\n";
 
       echo "<h4>Essen 2</h4>\n";
-      echo "<p>" . $hsair["essen2"]['v'][$key] . " (" . $hsair["essen2"]['p'][$key] . ")</p>\n";
+      echo "<p>" . $hsair['essen2']['v'][$key] . " (" . $hsair['essen2']['p'][$key] . ")</p>\n";
 
       echo "<hr />\n";
     }
@@ -71,10 +71,10 @@
         echo "<p> it's $comparator; no hsair data available</p>\n";
       else {
         echo "<h3>Essen 1</h3>\n";
-        echo "<p>" . $hsair["essen1"]['v'][$weekday] . " (" . $hsair["essen1"]['p'][$weekday] . ")</p>\n";
+        echo "<p>" . $hsair['essen1']['v'][$weekday] . " (" . $hsair['essen1']['p'][$weekday] . ")</p>\n";
 
         echo "<h3>Essen 2</h3>\n";
-        echo "<p>" . $hsair["essen2"]['v'][$weekday] . " (" . $hsair["essen2"]['p'][$weekday] . ")</p>\n";
+        echo "<p>" . $hsair['essen2']['v'][$weekday] . " (" . $hsair['essen2']['p'][$weekday] . ")</p>\n";
       }
     }
   }

@@ -26,8 +26,8 @@
 
   $hsmensa = json_decode($hsmensajson, true);
 
-  if(isset($_GET["when"]))
-    $when = $_GET["when"];
+  if(isset($_GET['when']))
+    $when = $_GET['when'];
 
   if(isset($when) && $when == "tomorrow")
     $weekday = date("N") + 1;
@@ -40,25 +40,25 @@
   echo "<div id=\"mensadata\">\n";
 
   if(isset($when) && $when == "week") {
-    foreach($hsmensa["datum"]['v'] as $key => $value) {
+    foreach($hsmensa['datum']['v'] as $key => $value) {
       if($key == 0) continue;
 
       echo "<h3>" . $value . "</h3>\n";
       echo "<h4>Essen 1</h4>\n";
-      echo "<p>" . $hsmensa["essen1"]['v'][$key] . " (" . $hsmensa["essen1"]['p'][$key] . ")</p>\n";
+      echo "<p>" . $hsmensa['essen1']['v'][$key] . " (" . $hsmensa['essen1']['p'][$key] . ")</p>\n";
 
       echo "<h4>Essen 2</h4>\n";
-      echo "<p>" . $hsmensa["essen2"]['v'][$key] . " (" . $hsmensa["essen2"]['p'][$key] . ")</p>\n";
+      echo "<p>" . $hsmensa['essen2']['v'][$key] . " (" . $hsmensa['essen2']['p'][$key] . ")</p>\n";
 
       echo "<h4>Front-Cooking</h4>\n";
-      echo "<p>" . $hsmensa["frontcooking"]['v'][$key] . " (" . $hsmensa["frontcooking"]['p'][$key] . ")</p>\n";
+      echo "<p>" . $hsmensa['frontcooking']['v'][$key] . " (" . $hsmensa['frontcooking']['p'][$key] . ")</p>\n";
 
       echo "<h4>Bio-Men&uuml;</h4>\n";
-      echo "<p>" . $hsmensa["biomenue"]['v'][$key] . " (" . $hsmensa["biomenue"]['p'][$key] . ")</p>\n";
+      echo "<p>" . $hsmensa['biomenue']['v'][$key] . " (" . $hsmensa['biomenue']['p'][$key] . ")</p>\n";
 
       echo "<h4>Beilagen</h4>\n";
       echo "<ul>\n";
-      $beilagen = explode(" |,| ", $hsmensa["beilagen"]['v'][$key]);
+      $beilagen = explode(" |,| ", $hsmensa['beilagen']['v'][$key]);
       foreach($beilagen as $beilage)
         echo "<li>" . $beilage . "</li>\n";
       echo "</ul>\n";
@@ -84,20 +84,20 @@
         echo "<p> it's $comparator; no hsmensa data available</p>\n";
       else {
         echo "<h3>Essen 1</h3>\n";
-        echo "<p>" . $hsmensa["essen1"]['v'][$weekday] . " (" . $hsmensa["essen1"]['p'][$weekday] . ")</p>\n";
+        echo "<p>" . $hsmensa['essen1']['v'][$weekday] . " (" . $hsmensa['essen1']['p'][$weekday] . ")</p>\n";
 
         echo "<h3>Essen 2</h3>\n";
-        echo "<p>" . $hsmensa["essen2"]['v'][$weekday] . " (" . $hsmensa["essen2"]['p'][$weekday] . ")</p>\n";
+        echo "<p>" . $hsmensa['essen2']['v'][$weekday] . " (" . $hsmensa['essen2']['p'][$weekday] . ")</p>\n";
 
         echo "<h3>Front-Cooking</h3>\n";
-        echo "<p>" . $hsmensa["frontcooking"]['v'][$weekday] . " (" . $hsmensa["frontcooking"]['p'][$weekday] . ")</p>\n";
+        echo "<p>" . $hsmensa['frontcooking']['v'][$weekday] . " (" . $hsmensa['frontcooking']['p'][$weekday] . ")</p>\n";
 
         echo "<h3>Bio-Men&uuml;</h3>\n";
-        echo "<p>" . $hsmensa["biomenue"]['v'][$weekday] . " (" . $hsmensa["biomenue"]['p'][$weekday] . ")</p>\n";
+        echo "<p>" . $hsmensa['biomenue']['v'][$weekday] . " (" . $hsmensa['biomenue']['p'][$weekday] . ")</p>\n";
 
         echo "<h3>Beilagen</h3>\n";
         echo "<ul>\n";
-        $beilagen = explode(" |,| ", $hsmensa["beilagen"]['v'][$weekday]);
+        $beilagen = explode(" |,| ", $hsmensa['beilagen']['v'][$weekday]);
         foreach($beilagen as $beilage)
           echo "<li>" . $beilage . "</li>\n";
         echo "</ul>\n";

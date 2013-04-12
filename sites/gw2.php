@@ -26,8 +26,8 @@
 
   $gw2 = json_decode($gw2json, true);
 
-  if(isset($_GET["when"]))
-    $when = $_GET["when"];
+  if(isset($_GET['when']))
+    $when = $_GET['when'];
 
   if(isset($when) && $when == "tomorrow")
     $weekday = date("N") + 1;
@@ -40,18 +40,18 @@
   echo "<div id=\"mensadata\">\n";
 
   if(isset($when) && $when == "week") {
-    foreach($gw2["datum"]['v'] as $key => $value) {
+    foreach($gw2['datum']['v'] as $key => $value) {
       if($key == 0) continue;
 
       echo "<h3>" . $value . "</h3>\n";
       echo "<h4>Pizza</h4>\n";
-      echo "<p>" . $gw2["pizza"]['v'][$key] . " (" . $gw2["pizza"]['p'][$key] . ")</p>\n";
+      echo "<p>" . $gw2['pizza']['v'][$key] . " (" . $gw2['pizza']['p'][$key] . ")</p>\n";
 
       echo "<h4>Pasta</h4>\n";
-      echo "<p>" . $gw2["pasta"]['v'][$key] . " (" . $gw2["pasta"]['p'][$key] . ")</p>\n";
+      echo "<p>" . $gw2['pasta']['v'][$key] . " (" . $gw2['pasta']['p'][$key] . ")</p>\n";
 
       echo "<h4>Front Cooking</h4>\n";
-      echo "<p>" . $gw2["frontcooking"]['v'][$key] . " (" . $gw2["frontcooking"]['p'][$key] . ")</p>\n";
+      echo "<p>" . $gw2['frontcooking']['v'][$key] . " (" . $gw2['frontcooking']['p'][$key] . ")</p>\n";
 
       echo "<hr />\n";
     }
@@ -74,13 +74,13 @@
         echo "<p> it's $comparator; no gw2 data available</p>\n";
       else {
         echo "<h3>Pizza</h3>\n";
-        echo "<p>" . $gw2["pizza"]['v'][$weekday] . " (" . $gw2["pizza"]['p'][$weekday] . ")</p>\n";
+        echo "<p>" . $gw2['pizza']['v'][$weekday] . " (" . $gw2['pizza']['p'][$weekday] . ")</p>\n";
 
         echo "<h3>Pasta</h3>\n";
-        echo "<p>" . $gw2["pasta"]['v'][$weekday] . " (" . $gw2["pasta"]['p'][$weekday] . ")</p>\n";
+        echo "<p>" . $gw2['pasta']['v'][$weekday] . " (" . $gw2['pasta']['p'][$weekday] . ")</p>\n";
 
         echo "<h3>Front Cooking</h3>\n";
-        echo "<p>" . $gw2["frontcooking"]['v'][$weekday] . " (" . $gw2["frontcooking"]['p'][$weekday] . ")</p>\n";
+        echo "<p>" . $gw2['frontcooking']['v'][$weekday] . " (" . $gw2['frontcooking']['p'][$weekday] . ")</p>\n";
       }
     }
   }

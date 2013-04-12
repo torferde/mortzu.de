@@ -1,7 +1,9 @@
 images/*
-!images/.gitignore
+!images/.gitkeep
 cache/*
-!cache/.gitignore
-simplepie/compatibility_test/*
-markdown/PHP Markdown Extra Readme.text
-markdown/test.php
+!cache/.gitkeep
+extlib/simplepie/compatibility_test/*
+extlib/markdown/PHP Markdown Extra Readme.text
+extlib/markdown/test.php
+extlib/gameq/examples/*
+extlib/gameq/tests/*

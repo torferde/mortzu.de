@@ -1,13 +1,6 @@
 <?php
   if(!defined("INCLUDE")) die();
 
-  $ua = strtolower($_SERVER['HTTP_USER_AGENT']);
-
-  if(strstr($ua, 'android') || strstr($ua, 'iphone') || strstr($ua, 'ipod') || strstr($ua, 'symbianos')) {
-    header('Location: /mmensa/');
-    exit();
-  }
-
   if(!file_exists("../mensa/mensa_new.php")) {
     echo "An error occured\n";
     echo "Please contact helios@planetcyborg.de (JID/Mail)\n";
@@ -33,8 +26,8 @@
 
   $mensa = json_decode($mensajson, true);
 
-  if(isset($_GET["when"]))
-    $when = $_GET["when"];
+  if(isset($_GET['when']))
+    $when = $_GET['when'];
 
   if(isset($when) && $when == "tomorrow")
     $weekday = date("N") + 1;
@@ -47,25 +40,25 @@
   echo "<div id=\"mensadata\">\n";
 
   if(isset($when) && $when == "week") {
-    foreach($mensa["datum"]['v'] as $key => $value) {
+    foreach($mensa['datum']['v'] as $key => $value) {
       if($key == 0) continue;
 
       echo "<h3>" . $value . "</h3>\n";
       echo "<h4>Essen 1</h4>\n";
-      echo "<p>" . $mensa["essen1"]['v'][$key] . " (" . $mensa["essen1"]['p'][$key] . ")</p>\n";
+      echo "<p>" . $mensa['essen1']['v'][$key] . " (" . $mensa['essen1']['p'][$key] . ")</p>\n";
 
       echo "<h4>Essen 2</h4>\n";
-      echo "<p>" . $mensa["essen2"]['v'][$key] . " (" . $mensa["essen2"]['p'][$key] . ")</p>\n";
+      echo "<p>" . $mensa['essen2']['v'][$key] . " (" . $mensa['essen2']['p'][$key] . ")</p>\n";
 
       echo "<h4>Wok u. Pfanne</h4>\n";
-      echo "<p>" . $mensa["wok"]['v'][$key] . " (" . $mensa["wok"]['p'][$key] . ")</p>\n";
+      echo "<p>" . $mensa['wok']['v'][$key] . " (" . $mensa['wok']['p'][$key] . ")</p>\n";
 
       echo "<h4>Vegetarisch</h4>\n";
-      echo "<p>" . $mensa["vegetarisch"]['v'][$key] . " (" . $mensa["vegetarisch"]['p'][$key] . ")</p>\n";
+      echo "<p>" . $mensa['vegetarisch']['v'][$key] . " (" . $mensa['vegetarisch']['p'][$key] . ")</p>\n";
 
       echo "<h4>Beilagen</h4>\n";
       echo "<ul>\n";
-      $beilagen = explode(" |,| ", $mensa["beilagen"]['v'][$key]);
+      $beilagen = explode(" |,| ", $mensa['beilagen']['v'][$key]);
       foreach($beilagen as $beilage)
         echo "<li>" . $beilage . "</li>\n";
       echo "</ul>\n";
@@ -73,7 +66,7 @@
       echo "<h4>Aufl&auml;ufe</h4>\n";
       echo "<ul>\n";
 
-      $auflaeufe = explode(" |,| ", $mensa["auflaeufe"]['v'][$key]);
+      $auflaeufe = explode(" |,| ", $mensa['auflaeufe']['v'][$key]);
 
       foreach($auflaeufe as $auflauf)
         echo "<li>" . $auflauf . "</li>\n";
@@ -101,20 +94,20 @@
         echo "<p> it's $comparator; no mensa data available</p>\n";
       else {
         echo "<h3>Essen 1</h3>\n";
-        echo "<p>" . $mensa["essen1"]['v'][$weekday] . " (" . $mensa["essen1"]['p'][$weekday] . ")</p>\n";
+        echo "<p>" . $mensa['essen1']['v'][$weekday] . " (" . $mensa['essen1']['p'][$weekday] . ")</p>\n";
 
         echo "<h3>Essen 2</h3>\n";
-        echo "<p>" . $mensa["essen2"]['v'][$weekday] . " (" . $mensa["essen2"]['p'][$weekday] . ")</p>\n";
+        echo "<p>" . $mensa['essen2']['v'][$weekday] . " (" . $mensa['essen2']['p'][$weekday] . ")</p>\n";
 
         echo "<h3>Wok u. Pfanne</h3>\n";
-        echo "<p>" . $mensa["wok"]['v'][$weekday] . " (" . $mensa["wok"]['p'][$weekday] . ")</p>\n";
+        echo "<p>" . $mensa['wok']['v'][$weekday] . " (" . $mensa['wok']['p'][$weekday] . ")</p>\n";
 
         echo "<h3>Vegetarisch</h3>\n";
-        echo "<p>" . $mensa["vegetarisch"]['v'][$weekday] . " (" . $mensa["vegetarisch"]['p'][$weekday] . ")</p>\n";
+        echo "<p>" . $mensa['vegetarisch']['v'][$weekday] . " (" . $mensa['vegetarisch']['p'][$weekday] . ")</p>\n";
 
         echo "<h3>Beilagen</h3>\n";
         echo "<ul>\n";
-        $beilagen = explode(" |,| ", $mensa["beilagen"]['v'][$weekday]);
+        $beilagen = explode(" |,| ", $mensa['beilagen']['v'][$weekday]);
         foreach($beilagen as $beilage)
           echo "<li>" . $beilage . "</li>\n";
         echo "</ul>\n";
@@ -122,7 +115,7 @@
         echo "<h3>Aufl&auml;ufe</h3>\n";
         echo "<ul>\n";
 
-        $auflaeufe = explode(" |,| ", $mensa["auflaeufe"]['v'][$weekday]);
+        $auflaeufe = explode(" |,| ", $mensa['auflaeufe']['v'][$weekday]);
 
         foreach($auflaeufe as $auflauf)
           echo "<li>" . $auflauf . "</li>\n";

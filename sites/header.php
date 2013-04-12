@@ -29,7 +29,9 @@ if($mode != "mr") {
   <body>
     <div id="main">
       <div id="header">
-        <img src="<?php echo $config['absolute_path']; ?>images/logo.png" alt="" />
+        <a href="<?php echo $config['absolute_path']; ?>">
+          <img src="<?php echo $config['absolute_path']; ?>images/logo.png" alt="" />
+        </a>
 
         <div id="headertwo">
           <img src="<?php echo $config['absolute_path']; ?>images/me.png" alt="" />

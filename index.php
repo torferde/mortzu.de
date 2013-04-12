@@ -4,7 +4,8 @@
   define("INCLUDE", time());
 
   // include functions
-  require_once "simplepie/simplepie.inc";
+  require_once "extlib/simplepie/simplepie.inc";
+  require_once "extlib/markdown/markdown.php";
   require_once "functions/parse_feed.php";
   require_once "functions/br2nl.php";
 
@@ -35,7 +36,8 @@
   $config['art_excludes'] = array('.', '..', '.ds_store', '.svn', 'thumbs', '.not_this', '.git');
   $config['striptags_feed'] = "<a><img><p><strong><b><i><em><br><code><ol><ul><li>";
   $config['striptags'] = $config['striptags_feed'] . "<object><embed><param>";
-  $config['maintitle'] = "helios, chaoticbilly, momo, moe, Moritz Rudert - names are different";
+  $config['maintitle'] = "helios, mortzu, chaoticbilly, momo, moe, Moritz Rudert - names are different";
+  $config['blogurl'] = "https://helios.planetcyborg.de/blog/";
 
   // require sites
   if(preg_match('/^\/unibremen/', $_SERVER['REQUEST_URI'])) {
@@ -53,14 +55,21 @@
     require_once "sites/hsair.php";
     require_once "sites/footer.php";
     die();
-  } elseif(preg_match('/^\/mensa/', $_SERVER['REQUEST_URI'])) {
-    require_once "sites/header.php";
-    require_once "sites/mensa.php";
-    require_once "sites/footer.php";
-    die();
   } elseif(preg_match('/^\/mensa_handy/', $_SERVER['REQUEST_URI'])) {
     $mensa_cache_file = __DIR__ . "/cache/" . $mensa_cache_file;
     require_once "../mensa/mensa_handy.php";
+    die();
+  } elseif(preg_match('/^\/mensa/', $_SERVER['REQUEST_URI'])) {
+    $ua = strtolower($_SERVER['HTTP_USER_AGENT']);
+
+    if(strstr($ua, 'android') || strstr($ua, 'iphone') || strstr($ua, 'ipod') || strstr($ua, 'symbianos')) {
+      header('Location: /mensa_handy');
+      die();
+    }
+
+    require_once "sites/header.php";
+    require_once "sites/mensa.php";
+    require_once "sites/footer.php";
     die();
   } elseif(preg_match('/^\/hsmensa/', $_SERVER['REQUEST_URI'])) {
     require_once "sites/header.php";
@@ -229,11 +238,11 @@ if($mode != "mr") {
 <h2><a name="blog">blog</a></h2>
 <?php
   // parse the blog feed
-  $blog = parse_rss_feed("http://systemfehler.org/feed/");
+  $blog = parse_rss_feed($config['blogurl'] . "feed/");
   foreach($blog as $key => $post) {
     echo "<h3><a href=\"#" . md5($key . $post['title']) . "\" name=\"" . md5($key . $post['title']) . "\">" . $post['title'] . "</a></h3>\n";
     echo "<small>" . date('d.m.Y H:i', $key) . "</small>\n";
-    echo str_replace("http://systemfehler.org/files/", $config['absolute_path'] . "secureimage.php?url=http://systemfehler.org/files/", $post['description']);
+    echo preg_replace("#https?://helios.planetcyborg.de/blog/wp-content/uploads/#", $config['absolute_path'] . "secureimage.php?url=" . $config['blogurl'] . "wp-content/uploads/", $post['description']);
   }
 ?>
 

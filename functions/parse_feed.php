@@ -15,14 +15,14 @@
 
     foreach ($items as $item) {
       $encoded_tmp = $item->get_item_tags(SIMPLEPIE_NAMESPACE_RSS_10_MODULES_CONTENT, 'encoded');
-      $encoded = $encoded_tmp[0]["data"];
+      $encoded = $encoded_tmp[0]['data'];
 
       if(isset($encoded) && $encoded != "")
         $content = $encoded;
       else
         $content = $item->get_content();
 
-      $content = strip_tags($content, $config["striptags"]);
+      $content = strip_tags($content, $config['striptags']);
       $timestamp = strtotime($item->get_date());
       $title = $item->get_title();
 
