@@ -24,7 +24,7 @@
     echo "      <link rel=\"alternate\" type=\"text/html\" href=\"" . htmlentities($protocol . $_SERVER['HTTP_HOST'] . "/#" . md5($key . $post['title']), ENT_QUOTES, 'UTF-8') . "\" />\n";
     echo "      <id>" . htmlentities($protocol . $_SERVER['HTTP_HOST'] . "/#" . md5($key . $post['title']), ENT_QUOTES, 'UTF-8') . "</id>\n";
 
-    echo "      <content type=\"html\"><![CDATA[" . strip_tags(preg_replace("#https?://helios.planetcyborg.de/blog/wp-content/uploads/#", $config['absolute_path'] . "secureimage.php?url=" . $config['blogurl'] . "wp-content/uploads/", $post['description']), $config['striptags_feed']) . "]]></content>\n";
+    echo "      <content type=\"html\"><![CDATA[" . strip_tags(preg_replace("#https?://mortzu.de/blog/wp-content/uploads/#", $config['absolute_path'] . "secureimage.php?url=" . $config['blogurl'] . "wp-content/uploads/", $post['description']), $config['striptags_feed']) . "]]></content>\n";
 
     if($post['author'] != "")
       echo "<author><name>" . $post['author'] . "</name></author>\n";

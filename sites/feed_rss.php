@@ -20,7 +20,7 @@
 
     echo "<link>" . htmlentities($protocol . $_SERVER['HTTP_HOST'] . "/#" . md5($key . $post['title']), ENT_QUOTES, 'UTF-8') . "</link>\n";
     echo "<guid isPermaLink=\"true\">" . htmlentities($protocol . $_SERVER['HTTP_HOST'] . "/#" . md5($key . $post['title']), ENT_QUOTES, 'UTF-8') . "</guid>\n";
-    echo "<description><![CDATA[" . strip_tags(preg_replace("#https?://helios.planetcyborg.de/blog/wp-content/uploads/#", $config['absolute_path'] . "secureimage.php?url=" . $config['blogurl'] . "wp-content/uploads/", $post['description']), $config['striptags_feed']) . "]]></description>\n";
+    echo "<description><![CDATA[" . strip_tags(preg_replace("#https?://mortzu.de/blog/wp-content/uploads/#", $config['absolute_path'] . "secureimage.php?url=" . $config['blogurl'] . "wp-content/uploads/", $post['description']), $config['striptags_feed']) . "]]></description>\n";
     echo "<pubDate>" . date("r", $key) . "</pubDate>\n";
     echo "</item>\n";
   }

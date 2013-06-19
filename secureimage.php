@@ -3,7 +3,7 @@
 
   $tmp = pathinfo($_GET['url']);
 
-  if(parse_url($_GET['url'], PHP_URL_HOST) == "helios.planetcyborg.de") {
+  if(parse_url($_GET['url'], PHP_URL_HOST) == "mortzu.de") {
     if(in_array($tmp['extension'], $allowed_extensions)) {
       $ch = curl_init();
       curl_setopt($ch, CURLOPT_URL, $_GET['url']);

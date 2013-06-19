@@ -23,7 +23,7 @@
     header("Location: /personensuchmaschine.html");
 
   // different modes of the page
-  if($_SERVER['HTTP_HOST'] == "helios.planetcyborg.de")
+  if($_SERVER['HTTP_HOST'] == "mortzu.de")
     $mode = "helios";
   else
     $mode = "mr";
@@ -37,7 +37,7 @@
   $config['striptags_feed'] = "<a><img><p><strong><b><i><em><br><code><ol><ul><li>";
   $config['striptags'] = $config['striptags_feed'] . "<object><embed><param>";
   $config['maintitle'] = "helios, mortzu, chaoticbilly, momo, moe, Moritz Rudert - names are different";
-  $config['blogurl'] = "https://helios.planetcyborg.de/blog/";
+  $config['blogurl'] = "https://mortzu.de/blog/";
 
   // require sites
   if(preg_match('/^\/unibremen/', $_SERVER['REQUEST_URI'])) {
@@ -242,7 +242,7 @@ if($mode != "mr") {
   foreach($blog as $key => $post) {
     echo "<h3><a href=\"#" . md5($key . $post['title']) . "\" name=\"" . md5($key . $post['title']) . "\">" . $post['title'] . "</a></h3>\n";
     echo "<small>" . date('d.m.Y H:i', $key) . "</small>\n";
-    echo preg_replace("#https?://helios.planetcyborg.de/blog/wp-content/uploads/#", $config['absolute_path'] . "secureimage.php?url=" . $config['blogurl'] . "wp-content/uploads/", $post['description']);
+    echo preg_replace("#https?://mortzu.de/blog/wp-content/uploads/#", $config['absolute_path'] . "secureimage.php?url=" . $config['blogurl'] . "wp-content/uploads/", $post['description']);
   }
 ?>
 

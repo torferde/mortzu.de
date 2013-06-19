@@ -66,7 +66,7 @@ Es gibt an der Uni mehrere Möglichkeiten etwas zu essen:
   * Hier kann man zwischen zwei Standardessen wählen, die recht günstig sind, aber auch diverse andere (teurere) Gerichte bekommen.
   * Zu finden wenn man den Boulevard entlang läuft und auf große Schilder achtet.
   * [Offizieller Plan des Essens](http://www.studentenwerk.bremen.de/files/main_info/essen/plaene/uniessen.php)
-  * [Alternativer Plan](http://helios.planetcyborg.de/mensa)
+  * [Alternativer Plan](https://mortzu.de/mensa)
  * __Cafe Central:__
   * Hier bekommt man neben Fastfood (Pommes, Burger) auch Kaffee, Brötchen, Salate und vieles mehr.
   * Befindet sich rechts neben der Mensa.
@@ -75,7 +75,7 @@ Es gibt an der Uni mehrere Möglichkeiten etwas zu essen:
   * In dieser bekommt man neben Kaffee und Brötchen seit neuestem auch wechselnde warme Mahlzeiten. 
   * Befindet sich im GW2; ist auch über den Boulevard betretbar.
   * [Offizieller Plan des Essens](http://www.studentenwerk.bremen.de/files/main_info/essen/plaene/gw2essen.php)
-  * [Alternativer Plan](http://helios.planetcyborg.de/gw2)
+  * [Alternativer Plan](https://mortzu.de/gw2)
  * __FB3-StugA-Cafete:__
   * Kaffee ist hier nicht weit. Für die Teetrinker steht ein Wasserkocher und eine Auswahl an Beuteln bereit.
   * Es gibt auch einen Kühlschrank in dem man seine beschrifteten Lebensmittel lagern kann.
@@ -97,9 +97,9 @@ Es gibt an der Uni mehrere Möglichkeiten etwas zu essen:
  * __[Cafe Unique](http://www.cafe-unique.de/):__
   * Befindet sich im SFG auch der linken Seite
  * Als Student kann man auch in den Mensen der Hochschulen im Land Bremen, zu Studentenpreisen essen:
-  * [Neustadtswall](http://www.studentenwerk.bremen.de/files/main_info/essen/plaene/hsbessen.php) ([alternativer Plan](https://helios.planetcyborg.de/hsmensa))
+  * [Neustadtswall](http://www.studentenwerk.bremen.de/files/main_info/essen/plaene/hsbessen.php) ([alternativer Plan](https://mortzu.de/hsmensa))
   * [Werderstr.](http://www.studentenwerk.bremen.de/files/main_info/essen/plaene/weressen.php)
-  * [Airport](http://www.studentenwerk.bremen.de/files/main_info/essen/plaene/airessen.php) ([alternativer Plan](https://helios.planetcyborg.de/hsair))
+  * [Airport](http://www.studentenwerk.bremen.de/files/main_info/essen/plaene/airessen.php) ([alternativer Plan](https://mortzu.de/hsair))
 
 Des weiteren sind auf dem Campus noch weitere Läden:
 
@@ -120,7 +120,7 @@ Um an der Uni-Bremen Kontakte zu pflegen gibt es mehrere Möglichkeiten:
  * jährlich wiederkommend:
   * [HAnF - Hochschulanfangsfeier](http://h-an-f.de/)
   * Wer viel Glühwein verträgt: Die Weinaxfeier von den FB3-Stugen (Aushänge beachten)
- * [Ausgehtodo von der ESO](http://helios.planetcyborg.de/files/kneipentour.pdf)
+ * [Ausgehtodo von der ESO](https://mortzu.de/files/kneipentour.pdf)
 
 ### Chatrooms
  * fb3@chat.uni-bremen.de ist ein Jabber-Chatraum der im FB3 Studierenden.
