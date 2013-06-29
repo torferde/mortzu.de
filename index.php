@@ -175,7 +175,7 @@
   <li><a href="http://wybt.net/">wybt</a>-Administrator</li>
   <li>Vereinsmitglied im <a href="http://fbmi.de/">FBMI</a> (F&ouml;rderverein der Bereichsstudierendenschaften Mathematik und Informatik an der Universit&auml;t Bremen e.V.)</li>
   <li>verschiedene <a href="http://ccc.de/">CCC</a>-nahe Aktivit&auml;ten<ul>
-    <li><a href="https://dn42.net/">dn42</a>-Gr&uuml;nder, Eigent&uuml;mer der Domain und Administrator des tracs</li>
+    <li><a href="https://dn42.net/">dn42</a>-Gr&uuml;nder, Eigent&uuml;mer der Domain und Administrator des Wikis</li>
     <li>Developer und Administrator vom <a href="https://engelsystem.de/">engelsystem</a> (source: <a href="https://planetcyborg.de/git/projects/engelsystem.git">planetcyborg.de/git/projects/engelsystem.git</a>)</li>
   </ul></li>
   <li>Vereinsmitglied im <a href="http://hackerspace-bremen.de/">Hackerspace Bremen</a><ul>
