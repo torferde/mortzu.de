@@ -174,7 +174,6 @@
   <li>eigene Firma seit 2007 (<a href="https://planetcyborg.de/">planet cyborg</a> vormals Quasar-Net)</li>
   <li><a href="http://wybt.net/">wybt</a>-Administrator</li>
   <li>Vereinsmitglied im <a href="http://fbmi.de/">FBMI</a> (F&ouml;rderverein der Bereichsstudierendenschaften Mathematik und Informatik an der Universit&auml;t Bremen e.V.)</li>
-  <li>Vereinsmitglied im <a href="http://ccc.de/">CCC</a></li>
   <li>verschiedene <a href="http://ccc.de/">CCC</a>-nahe Aktivit&auml;ten<ul>
     <li><a href="https://dn42.net/">dn42</a>-Gr&uuml;nder, Eigent&uuml;mer der Domain und Administrator des tracs</li>
     <li>Developer und Administrator vom <a href="https://engelsystem.de/">engelsystem</a> (source: <a href="https://planetcyborg.de/git/projects/engelsystem.git">planetcyborg.de/git/projects/engelsystem.git</a>)</li>
@@ -188,6 +187,7 @@
 
 <h3><a name="taten_vergangen">vergangenes Leben</a></h3>
 <ul>
+  <li>Vereinsmitglied im <a href="http://ccc.de/">CCC</a></li>
   <li>NOC und Stromorga f&uuml;r den <a href="http://www.informatik.uni-bremen.de/projekttag/2012/">Projekttag Informatik 2012</a> an der Uni-Bremen</li>
   <li>Webmaster f&uuml;r den <a href="http://www.informatik.uni-bremen.de/projekttag/2012/">Projekttag Informatik 2012</a> an der Uni-Bremen</li>
   <li>Mitorganisator der <a href="http://kif.fsinf.de/wiki/KIF395:Hauptseite">KIF 39.5</a>/KoMa 69 in Bremen</li>
