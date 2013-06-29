@@ -10,7 +10,7 @@
 <?php
 if($mode != "mr") {
 ?>
-    <title>helios, chaoticbilly, momo, moe, Moritz Rudert - names are different</title>
+    <title><?php echo $config['maintitle']; ?></title>
 <?php
 } else {
 ?>
