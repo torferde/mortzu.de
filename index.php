@@ -170,6 +170,7 @@
     <li>Betreuung der AccessPoints der Uni Bremen (Cisco 1131 und 1142 mit Cisco Controllern)</li>
     <li>Administration von Linuxservern der WLAN-Dienste (DHCP, DNS, Webseite, <a href="https://www.icinga.org/">icinga</a>)</li>
     <li>First level support via E-Mail, Telefon und pers&ouml;nlich</li>
+    <li>Outdoor-Festival-Netzwerkplanung und -aufbau beim <a href="http://www.uni-bremen.de/open-campus.html">OPEN CAMPUS</a> 2013</li>
   </ul></li>
   <li>eigene Firma seit 2007 (<a href="https://planetcyborg.de/">planet cyborg</a> vormals Quasar-Net)</li>
   <li><a href="http://wybt.net/">wybt</a>-Administrator</li>
