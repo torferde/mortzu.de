@@ -17,6 +17,9 @@ E-Mail: <a href="mailto:mr@planetcyborg.de">mr@planetcyborg.de</a></p>
       </div>
       </div>
 
+</div>
+</div>
+
 <!-- Piwik -->
 <script type="text/javascript">
 var pkBaseURL = (("https:" == document.location.protocol) ? "https://planetcyborg.de/piwik/" : "http://planetcyborg.de/piwik/");

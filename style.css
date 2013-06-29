@@ -161,3 +161,14 @@ ul#art li {
 iframe {
   border: none;
 }
+
+#ranks_left {
+  background: url(images/bg_right.png) repeat-y;
+  background-position: 0 0;
+}
+
+#ranks_right {
+  background: url(images/bg_left.png) repeat-y;
+  background-position: top right;
+  padding: 20px;
+}

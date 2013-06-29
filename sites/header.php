@@ -27,6 +27,9 @@ if($mode != "mr") {
   </head>
 
   <body>
+    <div id="ranks_left">
+    <div id="ranks_right">
+
     <div id="main">
       <div id="header">
         <a href="<?php echo $config['absolute_path']; ?>">
