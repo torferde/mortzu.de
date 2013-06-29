@@ -178,15 +178,15 @@
     <li><a href="https://dn42.net/">dn42</a>-Gr&uuml;nder, Eigent&uuml;mer der Domain und Administrator des Wikis</li>
     <li>Developer und Administrator vom <a href="https://engelsystem.de/">engelsystem</a> (source: <a href="https://planetcyborg.de/git/projects/engelsystem.git">planetcyborg.de/git/projects/engelsystem.git</a>)</li>
   </ul></li>
-  <li>Vereinsmitglied im <a href="http://hackerspace-bremen.de/">Hackerspace Bremen</a><ul>
-    <li>Administrator des Bremer Hackerspace Servers</li>
-  </ul></li>
   <li>Webmaster vom <a href="http://hackint.eu/">hackint</a></li>
   <li>Initiator und Administrator des <a href="http://jabber.uni-bremen.de/">Jabberservers</a> der Uni-Bremen</li>
 </ul>
 
 <h3><a name="taten_vergangen">vergangenes Leben</a></h3>
 <ul>
+  <li>Vereinsmitglied im <a href="http://hackerspace-bremen.de/">Hackerspace Bremen</a><ul>
+    <li>Administrator des Bremer Hackerspace Servers</li>
+  </ul></li>
   <li>Vereinsmitglied im <a href="http://ccc.de/">CCC</a></li>
   <li>NOC und Stromorga f&uuml;r den <a href="http://www.informatik.uni-bremen.de/projekttag/2012/">Projekttag Informatik 2012</a> an der Uni-Bremen</li>
   <li>Webmaster f&uuml;r den <a href="http://www.informatik.uni-bremen.de/projekttag/2012/">Projekttag Informatik 2012</a> an der Uni-Bremen</li>
