@@ -57,7 +57,7 @@ Wenn ihr nach günstigen DSL-Angeboten in Bremen sucht:
 
  * [inoffizielle Info-Seite](http://semesterticket.info/)
  * [Karte der Gültigkeit](http://semesterticket.info/karte/SemesterTicketSoSe2008_300dpi.gif)
- * [AStA-Seite zum Semesterticket](http://www.asta.uni-bremen.de/?page_id=328)
+ * [AStA-Seite zum Semesterticket](http://www.asta.uni-bremen.de/service/semesterticket/)
 
 ## Essen/Getränke/Läden
 Es gibt an der Uni mehrere Möglichkeiten etwas zu essen:
@@ -92,7 +92,7 @@ Es gibt an der Uni mehrere Möglichkeiten etwas zu essen:
  * __[O'Flynn's](http://www.oflynns.de/):__
   * Befindet sich in der Galileo Residenz
  * __Bio Biss__ im GW1
- * __[Cafe Kultur](http://www.asta.uni-bremen.de/?page_id=8701):__
+ * __[Cafe Kultur](http://www.asta.uni-bremen.de/service/cafe-kultur/):__
   * Befindet sich links neben dem Theatersaal unter der Mensa
  * __[Cafe Unique](http://www.cafe-unique.de/):__
   * Befindet sich im SFG auch der linken Seite
@@ -173,10 +173,10 @@ Als einziger Zugangsweg bleibt dann nur noch die Publickey-Authentifizierung.
 ### [ZfN (Zentrum für Netze)](http://www.zfn.uni-bremen.de/)
 #### Allgemeines
  * [MSDNAA (FB 1,2,4,5 und 7)](http://www2.zfn.uni-bremen.de/server/content/msdnaa/)
- * [VPN-Dienst (um z.B. von zu Hause auf ebooks zuzugreifen)](http://www.uni-bremen.de/zfn/vpn.html)
- * [Anleitung für den ZfN-Mailservice](http://www2.zfn.uni-bremen.de/server/content/mail/)
- * [Hinweise zum PC-Pool des ZfN](http://www2.zfn.uni-bremen.de/server/content/pc-pools/)
- * [HowTo-Sammlung](http://www2.zfn.uni-bremen.de/server/content/anleitungen/)
+ * [VPN-Dienst (um z.B. von zu Hause auf ebooks zuzugreifen)](http://www.uni-bremen.de/zfn/netz.html#c25704)
+ * [Anleitung für den ZfN-Mailservice](http://www.uni-bremen.de/zfn/kommunikation.html)
+ * [Hinweise zum PC-Pool des ZfN](http://www.uni-bremen.de/zfn/rechnerpool-kursraeume.html)
+ * [HowTo-Sammlung](http://www.uni-bremen.de/zfn/anleitungen.html)
  * [Mailalias für Uni-Mailadresse anlegen](https://www.uni-bremen.de/secure/aliaseingabe)
  * [Mailweiterleitung für Uni-Mailadresse](https://www2.zfn.uni-bremen.de/server/content/mailtools/forward.php)
 
