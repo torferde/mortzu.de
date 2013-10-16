@@ -1,9 +1,9 @@
 <?php
   if(!defined("INCLUDE")) die();
 
-  if(!file_exists("../mensa/mensa_new.php")) {
+  if(!file_exists("extlib/mensa/mensa_new.php")) {
     echo "An error occured\n";
-    echo "Please contact helios@planetcyborg.de (JID/Mail)\n";
+    echo "Please contact me@mortzu.de (JID/Mail)\n";
     die();
   }
 
@@ -12,8 +12,8 @@
   date_default_timezone_set('Europe/Berlin');
   $weekday = date("N");
 
-  include "../mensa/mensa_new.php";
-  include "../mensa/mensa_new_config.php";
+  include "extlib/mensa/mensa_new.php";
+  include "extlib/mensa/mensa_new_config.php";
 
   $mensa_cache_file = __DIR__ . "/../cache/" . $mensa_cache_file;
 

@@ -1,19 +1,22 @@
 <?php
   if(!defined("INCLUDE")) die();
+?>
 
-  echo "<table border=\"1\" id=\"quotes\">\n";
-  echo "<tr><th>#</th><th>Datum/Zeit</th><th>Quote</th></tr>\n";
+<table border="1" id="quotes">
+<tr><th>#</th><th>Datum/Zeit</th><th>Quote</th></tr>
 
-  $content = file("https://planetcyborg.de/backend/quotes.php");
+<?php
+  $content = json_decode(file_get_contents('https://dronf.net/quotes.php'), true);
   $i = 0;
 
   foreach($content as $row) {
+    if(empty($row['content'])) continue;
+
     $i++;
-    preg_match('/ _\|\|_ (.*) _\|\|_ (.*) _\|\|_ (.*) _\|\|_/si', $row, $matches);
     echo "<tr>\n";
-    echo "<td>" . $i . "</td><td>" . $matches[2] . "</td><td>" . nl2br(htmlentities(br2nl($matches[3]), ENT_COMPAT, "UTF-8")) . "</td>\n";
+    echo "<td>" . $i . "</td><td>" . $row['date'] . "</td><td style=\"width: 600px;\">" . $row['content'] . "</td>\n";
     echo "</tr>\n";
   }
-
-  echo "</table><br />\n";
 ?>
+
+</table><br />

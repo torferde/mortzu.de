@@ -16,17 +16,13 @@
   }
 
   // for fucking personensuchmaschinen redirect away
-  if(preg_match("/^.*yasni\.de.*$/", $_SERVER['HTTP_REFERER']) ||
-     preg_match("/^.*pipl\.com.*$/", $_SERVER['HTTP_REFERER']) ||
-     preg_match("/^.*123people\.de.*$/", $_SERVER['HTTP_REFERER']) ||
-     preg_match("/^.*radaris\.de.*$/", $_SERVER['HTTP_REFERER']))
-    header("Location: /personensuchmaschine.html");
-
-  // different modes of the page
-  if($_SERVER['HTTP_HOST'] == "mortzu.de")
-    $mode = "helios";
-  else
-    $mode = "mr";
+  if(isset($_SERVER['HTTP_REFERER'])) {
+    if(preg_match("/^.*yasni\.de.*$/", $_SERVER['HTTP_REFERER']) ||
+       preg_match("/^.*pipl\.com.*$/", $_SERVER['HTTP_REFERER']) ||
+       preg_match("/^.*123people\.de.*$/", $_SERVER['HTTP_REFERER']) ||
+       preg_match("/^.*radaris\.de.*$/", $_SERVER['HTTP_REFERER']))
+      header("Location: /personensuchmaschine.html");
+  }
 
   // config
   $config['absolute_path'] = "/";
@@ -36,7 +32,7 @@
   $config['art_excludes'] = array('.', '..', '.ds_store', '.svn', 'thumbs', '.not_this', '.git');
   $config['striptags_feed'] = "<a><img><p><strong><b><i><em><br><code><ol><ul><li>";
   $config['striptags'] = $config['striptags_feed'] . "<object><embed><param>";
-  $config['maintitle'] = "helios, mortzu, chaoticbilly, momo, moe, Moritz Rudert - names are different";
+  $config['maintitle'] = "mortzu, chaoticbilly, momo, moe, Moritz Rudert - names are different";
   $config['blogurl'] = "https://mortzu.de/blog/";
 
   // require sites
@@ -57,7 +53,7 @@
     die();
   } elseif(preg_match('/^\/mensa_handy/', $_SERVER['REQUEST_URI'])) {
     $mensa_cache_file = __DIR__ . "/cache/" . $mensa_cache_file;
-    require_once "../mensa/mensa_handy.php";
+    require_once "extlib/mensa/mensa_handy.php";
     die();
   } elseif(preg_match('/^\/mensa/', $_SERVER['REQUEST_URI'])) {
     $ua = strtolower($_SERVER['HTTP_USER_AGENT']);
@@ -82,9 +78,11 @@
     require_once "sites/footer.php";
     die();
   } elseif(preg_match('/^\/feed\/atom/', $_SERVER['REQUEST_URI'])) {
+    die();
     require_once "sites/feed_atom.php";
     die();
   } elseif(preg_match('/^\/feed\/rss/', $_SERVER['REQUEST_URI'])) {
+    die();
     require_once "sites/feed_rss.php";
     die();
   }
@@ -133,17 +131,17 @@
 
 <h2><a name="finde_mich">Finde mich</a></h2>
 <ul>
-  <li>XMPP: <img src="https://planetcyborg.de/index.php?p=indicator&amp;jid=helios@planetcyborg.de&amp;theme=0" alt="" /> <a href="xmpp:helios@planetcyborg.de">helios@planetcyborg.de</a></li>
-  <li>IRC: helios im <a href="http://hackint.eu/">hackint</a></li>
+  <li>XMPP: <img src="https://planetcyborg.de/index.php?p=indicator&amp;jid=me@mortzu.de&amp;theme=0" alt="" /> <a href="xmpp:me@mortzu.de">me@mortzu.de</a></li>
+  <li>IRC: mortzu im <a href="http://hackint.eu/">hackint</a></li>
   <li>blog: <a href="https://mw.vc/author/helios/">milliways-blog</a></li>
-  <li>E-Mail: <a href="mailto:helios@planetcyborg.de">helios@planetcyborg.de</a></li>
+  <li>E-Mail: <a href="mailto:me@mortzu.de">me@mortzu.de</a></li>
 </ul>
 
 <h2><a name="namen">Namen sind nur Schall und Rauch</a></h2>
 <ul>
-  <li><a href="https://de.wikipedia.org/wiki/Helios">helios</a></li>
   <li>chaoticbilly</li>
   <li><a href="https://de.wikipedia.org/wiki/Momo">momo</a></li>
+  <li>mortzu</li>
   <li><a href="https://de.wikipedia.org/wiki/Figuren_aus_Die_Simpsons#Moe_Szyslak">moe</a></li>
   <li>Moritz (Kaspar) Rudert</li>
 </ul>
@@ -214,12 +212,8 @@
   <li><a href="https://de.wikipedia.org/wiki/Das_Haus_am_See">Haus</a> am <a href="https://de.wikipedia.org/wiki/Stadtaffe">See</a></li>
 </ul>
 
-<?php
-if($mode != "mr") {
-?>
-
 <h2><a name="andere">andere &uuml;ber mich</a></h2>
-<small>Willst du, dass deine Aussage auch hier steht? Dann schick mir eine E-Mail an <a href="mailto:helios@planetcyborg.de">helios@planetcyborg.de</a>.</small><br />
+<small>Willst du, dass deine Aussage auch hier steht? Dann schick mir eine E-Mail an <a href="mailto:me@mortzu.de">me@mortzu.de</a>.</small><br />
 <ul>
   <li>von den Leuten, die ich bisher getroffen hab, mit die meiste Ahnung von Servern, Netzen und &Auml;hnlichem.</li>
   <li>Mit ihm arbeiten macht Spa&szlig;, ist am Anfang aber ungewohnt, denn er sagt, was er denkt; manchmal auf eine Art, an die man sich erst gew&ouml;hnen muss.</li>
@@ -239,18 +233,18 @@ if($mode != "mr") {
 <h2><a name="blog">blog</a></h2>
 <?php
   // parse the blog feed
-  $blog = parse_rss_feed($config['blogurl'] . "feed/");
+/*  $blog = parse_rss_feed($config['blogurl'] . "feed/");
   foreach($blog as $key => $post) {
     echo "<h3><a href=\"#" . md5($key . $post['title']) . "\" name=\"" . md5($key . $post['title']) . "\">" . $post['title'] . "</a></h3>\n";
     echo "<small>" . date('d.m.Y H:i', $key) . "</small>\n";
     echo preg_replace("#https?://mortzu.de/blog/wp-content/uploads/#", $config['absolute_path'] . "secureimage.php?url=" . $config['blogurl'] . "wp-content/uploads/", $post['description']);
-  }
+  } */
 ?>
 
 <h2><a name="art">art</a></h2>
 <div id="gallery">
+<ul id="art">
 <?php
-echo "<ul id=\"art\">";
 foreach($inc as $file) {
   if ($dh2 = opendir($config['art_folder'] . $file)) {
     while (($file2 = readdir($dh2)) !== false) {
@@ -279,7 +273,6 @@ foreach($inc as $file) {
   <li><a href="https://blog.jplitza.de/">jplitza</a></li>
 </ul>
 <?php
-}
 
 require_once "sites/footer.php";
 ?>

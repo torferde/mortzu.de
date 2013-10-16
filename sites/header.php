@@ -6,19 +6,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-
-<?php
-if($mode != "mr") {
-?>
     <title><?php echo $config['maintitle']; ?></title>
-<?php
-} else {
-?>
-    <title>Moritz Rudert</title>
-<?php
-}
-?>
-
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="stylesheet" href="<?php echo $config['absolute_path']; ?>style.css" />
     <link rel="alternate" type="application/atom+xml" title="ATOM" href="/feed/atom" />
@@ -29,6 +17,8 @@ if($mode != "mr") {
   <body>
     <div id="ranks_left">
     <div id="ranks_right">
+
+    <div style="position: absolute; right: 10px; top: 10px; color: #fff;"><a href="https://mortzu.de/imprint/" style="color: #fff;">Impressum</a></div>
 
     <div id="main">
       <div id="header">
