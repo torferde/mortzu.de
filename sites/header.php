@@ -18,7 +18,7 @@
     <div id="ranks_left">
     <div id="ranks_right">
 
-    <div style="position: absolute; right: 10px; top: 10px; color: #fff;"><a href="https://mortzu.de/imprint/" style="color: #fff;">Impressum</a></div>
+    <div style="position: absolute; right: 10px; top: 10px; color: #fff;"><a href="https://mortzu.de/impressum/" style="color: #fff;">Impressum</a></div>
 
     <div id="main">
       <div id="header">

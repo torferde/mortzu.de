@@ -4,10 +4,7 @@
   define("INCLUDE", time());
 
   // include functions
-  require_once "extlib/simplepie/simplepie.inc";
   require_once "extlib/markdown/markdown.php";
-  require_once "functions/parse_feed.php";
-  require_once "functions/br2nl.php";
 
   // redirect to https
   if($_SERVER['HTTPS'] != "on") {
@@ -77,13 +74,13 @@
     require_once "sites/quotes.php";
     require_once "sites/footer.php";
     die();
-  } elseif(preg_match('/^\/feed\/atom/', $_SERVER['REQUEST_URI'])) {
+  } elseif(preg_match('/^\/london/', $_SERVER['REQUEST_URI'])) {
+    $twitter_what = "london";
+    require_once "sites/twitterparser.php";
     die();
-    require_once "sites/feed_atom.php";
-    die();
-  } elseif(preg_match('/^\/feed\/rss/', $_SERVER['REQUEST_URI'])) {
-    die();
-    require_once "sites/feed_rss.php";
+  } elseif(preg_match('/^\/borkum/', $_SERVER['REQUEST_URI'])) {
+    $twitter_what = "borkum";
+    require_once "sites/twitterparser.php";
     die();
   }
 
@@ -126,14 +123,14 @@
   <li>seit meiner Geburt in Bremen</li>
   <li>kurze Intermezzi in <a href="https://de.wikipedia.org/wiki/Hasbergen_%28Delmenhorst%29">Hasbergen</a> und <a href="https://de.wikipedia.org/wiki/Delmenhorst">Delmenhorst/Heidkrug</a></li>
   <li>momentan in einer <a href="https://mw.vc">Informatiker/Soziologinnen-WG</a> in der Neustadt</li>
-  <li>zeitweise anzutreffen: <a href="https://de.wikipedia.org/w/index.php?title=Datei:Mzh_uni_bremen-3.jpg">MZH</a>, <a href="http://www.uni-bremen.de/">Uni-Bremen</a></li>
+  <li>zeitweise anzutreffen: <a href="https://de.wikipedia.org/w/index.php?title=Datei:Mzh_uni_bremen-3.jpg">MZH</a>, <a href="http://www.uni-bremen.de">Uni-Bremen</a></li>
 </ul>
 
 <h2><a name="finde_mich">Finde mich</a></h2>
 <ul>
   <li>XMPP: <img src="https://planetcyborg.de/index.php?p=indicator&amp;jid=me@mortzu.de&amp;theme=0" alt="" /> <a href="xmpp:me@mortzu.de">me@mortzu.de</a></li>
-  <li>IRC: mortzu im <a href="http://hackint.eu/">hackint</a></li>
-  <li>blog: <a href="https://mw.vc/author/helios/">milliways-blog</a></li>
+  <li>IRC: mortzu im <a href="http://hackint.eu">hackint</a></li>
+  <li>blog: <a href="http://ghost.mortzu.de">blog</a>, <a href="https://mw.vc/author/mortzu/">milliways-blog</a></li>
   <li>E-Mail: <a href="mailto:me@mortzu.de">me@mortzu.de</a></li>
 </ul>
 
@@ -157,42 +154,44 @@
 <h3><a name="taten_aktuell">aktuelles Leben</a></h3>
 <ul>
   <li><?php echo $age; ?> Jahre alt</li>
-  <li>Student an der <a href="http://uni-bremen.de/">Uni-Bremen</a> (<a href="http://informatik.uni-bremen.de/">Informatik</a> dipl.) im <?php echo $semester; ?>. Semester</li>
+  <li>Student an der <a href="http://uni-bremen.de">Uni-Bremen</a> (<a href="http://informatik.uni-bremen.de">Informatik</a> dipl.) im <?php echo $semester; ?>. Semester</li>
   <li>hochschulpolitisches Engagement an der Uni-Bremen:<ul>
-    <li>Mitglied im <a href="http://inf.stugen.de/">StugA Informatik</a></li>
     <li>Stugen-Administrator</li>
     <li>Gremienarbeit: IT-Lk (IT-Lenkungskreis)</li>
-    <li>Gremienarbeit: Stugenkonferenz</li>
   </ul></li>
-  <li><a href="http://www.wlan.uni-bremen.de/">Campus-WLAN</a>-Betreuung als studentische Hilfskraft<ul>
+  <li><a href="http://www.wlan.uni-bremen.de">Campus-WLAN</a>-Betreuung als studentische Hilfskraft<ul>
     <li>Betreuung der AccessPoints der Uni Bremen (Cisco 1131 und 1142 mit Cisco Controllern)</li>
-    <li>Administration von Linuxservern der WLAN-Dienste (DHCP, DNS, Webseite, <a href="https://www.icinga.org/">icinga</a>)</li>
+    <li>Administration von Linuxservern der WLAN-Dienste (DHCP, DNS, Webseite, <a href="https://www.icinga.org">icinga</a>)</li>
     <li>First level support via E-Mail, Telefon und pers&ouml;nlich</li>
     <li>Outdoor-Festival-Netzwerkplanung und -aufbau beim <a href="http://www.uni-bremen.de/open-campus.html">OPEN CAMPUS</a> 2013</li>
   </ul></li>
-  <li>eigene Firma seit 2007 (<a href="https://planetcyborg.de/">planet cyborg</a> vormals Quasar-Net)</li>
-  <li><a href="http://wybt.net/">wybt</a>-Administrator</li>
-  <li>Vereinsmitglied im <a href="http://fbmi.de/">FBMI</a> (F&ouml;rderverein der Bereichsstudierendenschaften Mathematik und Informatik an der Universit&auml;t Bremen e.V.)</li>
-  <li>verschiedene <a href="http://ccc.de/">CCC</a>-nahe Aktivit&auml;ten<ul>
-    <li><a href="https://dn42.net/">dn42</a>-Gr&uuml;nder, Eigent&uuml;mer der Domain und Administrator des Wikis</li>
-    <li>Developer und Administrator vom <a href="https://engelsystem.de/">engelsystem</a> (source: <a href="https://planetcyborg.de/git/projects/engelsystem">planetcyborg.de/git/projects/engelsystem</a>)</li>
+  <li>eigene Firma seit 2007 (<a href="https://planetcyborg.de">planet cyborg</a> vormals Quasar-Net)</li>
+  <li><a href="http://wybt.net">wybt</a>-Administrator</li>
+  <li>Vereinsmitglied im <a href="http://fbmi.de">FBMI</a> (F&ouml;rderverein der Bereichsstudierendenschaften Mathematik und Informatik an der Universit&auml;t Bremen e.V.)</li>
+  <li>verschiedene <a href="http://ccc.de">CCC</a>-nahe Aktivit&auml;ten<ul>
+    <li><a href="https://dn42.net">dn42</a>-Gr&uuml;nder, Eigent&uuml;mer der Domain und Administrator des Wikis</li>
+    <li>Developer und Administrator vom <a href="https://engelsystem.de">engelsystem</a> (source: <a href="https://planetcyborg.de/git/projects/engelsystem">planetcyborg.de/git/projects/engelsystem</a>)</li>
   </ul></li>
-  <li>Webmaster vom <a href="http://hackint.eu/">hackint</a></li>
-  <li>Initiator und Administrator des <a href="http://jabber.uni-bremen.de/">Jabberservers</a> der Uni-Bremen</li>
+  <li>Webmaster vom <a href="http://hackint.eu">hackint</a></li>
+  <li>Initiator und Administrator des <a href="http://jabber.uni-bremen.de">Jabberservers</a> der Uni-Bremen</li>
 </ul>
 
 <h3><a name="taten_vergangen">vergangenes Leben</a></h3>
-<ul>
-  <li>Vereinsmitglied im <a href="http://hackerspace-bremen.de/">Hackerspace Bremen</a><ul>
+  <ul>
+  <li>hochschulpolitisches Engagement an der Uni-Bremen:<ul>
+    <li>Mitglied im <a href="http://inf.stugen.de">StugA Informatik</a></li>
+    <li>Gremienarbeit: Stugenkonferenz</li>
+  </ul></li>
+  <li>Vereinsmitglied im <a href="http://hackerspace-bremen.de">Hackerspace Bremen</a><ul>
     <li>Administrator des Bremer Hackerspace Servers</li>
   </ul></li>
-  <li>Vereinsmitglied im <a href="http://ccc.de/">CCC</a></li>
+  <li>Vereinsmitglied im <a href="http://ccc.de">CCC</a></li>
   <li>NOC und Stromorga f&uuml;r den <a href="http://www.informatik.uni-bremen.de/projekttag/2012/">Projekttag Informatik 2012</a> an der Uni-Bremen</li>
   <li>Webmaster f&uuml;r den <a href="http://www.informatik.uni-bremen.de/projekttag/2012/">Projekttag Informatik 2012</a> an der Uni-Bremen</li>
   <li>Mitorganisator der <a href="http://kif.fsinf.de/wiki/KIF395:Hauptseite">KIF 39.5</a>/KoMa 69 in Bremen</li>
-  <li>zweimaliger Weltmeister im <a href="http://www.robocupgermanopen.de/">Robocup</a> <a href="http://junior.robocupgermanopen.de/junior/rescue">junior rescue</a> 2008/2009 
-    (einmal als Teammitglied, einmal als Betreuer im Team <a href="/hoppus/">hoppuS</a>)</li>
-  <li>verschiedenes politisches Engagement in Bremen (OL (Ortsleitung) der <a href="http://www.naturfreundejugend.de/">NFJ</a>-Bremen)</li>
+  <li>zweimaliger Weltmeister im <a href="http://www.robocupgermanopen.de">Robocup</a> <a href="http://junior.robocupgermanopen.de/junior/rescue">junior rescue</a> 2008/2009 
+    (einmal als Teammitglied, einmal als Betreuer im Team <a href="http://hoppus.org">hoppuS</a>)</li>
+  <li>verschiedenes politisches Engagement in Bremen (OL (Ortsleitung) der <a href="http://www.naturfreundejugend.de">NFJ</a>-Bremen)</li>
   <li>Sch&uuml;ler am SZ Walle Lange Reihe Sek. 2<ul>
     <li>SV-Vorstand/Schulsprecher des SZ Walle Lange Reihe Sek. 2</li>
     <li>Erstellung der Schulhomepage SZ Walle Lange Reihe Sek. 2</li>
@@ -219,7 +218,7 @@
   <li>Mit ihm arbeiten macht Spa&szlig;, ist am Anfang aber ungewohnt, denn er sagt, was er denkt; manchmal auf eine Art, an die man sich erst gew&ouml;hnen muss.</li>
   <li>es ist seine Aufrichtigkeit und Ehrlichkeit, die ihn auszeichnet, weshalb ich seine ehrliche Kritik immer sch&auml;tze.</li>
   <li>ein Mensch auf den man sich immer verlassen kann, der immer einfach da ist und auch bei unverst&auml;ndlichen Problemen hilft</li>
-  <li>hat eine v&ouml;llig verrueckte Art, die einfach liebenswert ist, wenn man ihn n&auml;her kennenlernt und am Anfang einfach spannend wirkt.</li>
+  <li>hat eine v&ouml;llig verr&uuml;ckte Art, die einfach liebenswert ist, wenn man ihn n&auml;her kennenlernt und am Anfang einfach spannend wirkt.</li>
   <li>wei&szlig; sich ein- und durchzusetzten und f&uuml;r das einzustehen was er haben will.</li>
   <li>er ist interessant, weil man nie wei&szlig; welchen Quatsch er jetzt grad wieder im Kopf hat.</li>
   <li>neben seinen technischen Hobbies verliert er aber nie den Blick f&uuml;r seine Umwelt und vor allem seine n&auml;chsten Mitmenschen.</li>
@@ -229,17 +228,6 @@
   <li>Cooler Nerd mit lustigen Ideen und Interessen, bei dem es manchmal etwas schwierig ist, seinen Sarkasmus von Ernst zu unterscheiden.</li>
   <li>Hat mehr Dinge im Kopf, als ich K&ouml;pfe habe.</li>
 </ul>
-
-<h2><a name="blog">blog</a></h2>
-<?php
-  // parse the blog feed
-/*  $blog = parse_rss_feed($config['blogurl'] . "feed/");
-  foreach($blog as $key => $post) {
-    echo "<h3><a href=\"#" . md5($key . $post['title']) . "\" name=\"" . md5($key . $post['title']) . "\">" . $post['title'] . "</a></h3>\n";
-    echo "<small>" . date('d.m.Y H:i', $key) . "</small>\n";
-    echo preg_replace("#https?://mortzu.de/blog/wp-content/uploads/#", $config['absolute_path'] . "secureimage.php?url=" . $config['blogurl'] . "wp-content/uploads/", $post['description']);
-  } */
-?>
 
 <h2><a name="art">art</a></h2>
 <div id="gallery">
@@ -265,12 +253,12 @@ foreach($inc as $file) {
 
 <h2><a name="lese">hier lese ich</a></h2>
 <ul>
-  <li><a href="http://weltheit.eu/">mieke</a></li>
-  <li><a href="http://tahlly.planetcyb.org/">tahlly</a></li>
-  <li><a href="http://salissa.planetcyb.org/">salissa</a></li>
-  <li><a href="http://notrademark.de/">msquare</a></li>
-  <li><a href="https://blog.cvigano.de/">kritter</a></li>
-  <li><a href="https://blog.jplitza.de/">jplitza</a></li>
+  <li><a href="http://weltheit.eu">mieke</a></li>
+  <li><a href="http://tahlly.planetcyb.org">tahlly</a></li>
+  <li><a href="http://salissa.planetcyb.org">salissa</a></li>
+  <li><a href="http://notrademark.de">msquare</a></li>
+  <li><a href="https://blog.cvigano.de">kritter</a></li>
+  <li><a href="https://blog.jplitza.de">jplitza</a></li>
 </ul>
 <?php
 

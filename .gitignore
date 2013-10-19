@@ -2,11 +2,8 @@ images/*
 !images/.gitkeep
 cache/*
 !cache/.gitkeep
-extlib/simplepie/compatibility_test/*
 extlib/markdown/PHP Markdown Extra Readme.text
 extlib/markdown/test.php
-extlib/gameq/examples/*
-extlib/gameq/tests/*
 extlib/mensa/*
 impressum/*
 files/*
